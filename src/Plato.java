@@ -13,6 +13,10 @@ public class Plato {
         this.platoID = platoID;
     }
 
+    public int getPlatoID() {
+        return platoID;
+    }
+
     public String getNombre() {
         return nombre;
     }

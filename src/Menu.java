@@ -2,6 +2,10 @@ import java.util.List;
 
 public class Menu extends Plato{
 
+    public Menu(){
+        super("",0,0);
+    }
+
 
     public Menu(String nombre, double precio, int platoID) {
         super(nombre, precio, platoID);
@@ -13,12 +17,17 @@ public class Menu extends Plato{
         platos.add(plato);
     }
 
-    public void eliminarPlato(Plato plato) {
+    public void eliminarPlato(int plato) {
         platos.remove(plato);
     }
 
-    public void modificarPrecioPlato(Plato plato, double precio) {
-        plato.actualizarPrecio(precio);
+    public void modificarPrecioPlato(int platoID, double precio) {
+        for (Plato plato : platos){
+            if(plato.getPlatoID() == platoID){
+                plato.actualizarPrecio(precio);
+                break;
+            }
+        }
     }
 
     public void mostrarMenu() {

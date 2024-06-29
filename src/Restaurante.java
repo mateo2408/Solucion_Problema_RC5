@@ -1,13 +1,17 @@
 public class Restaurante extends Menu{
 
-    public Restaurante(String nombre, double precio, int platoID) {
-        super(nombre, precio, platoID);
-    }
-
     private String nombreR;
     private String direccion;
     private String telefono;
     private Menu menu;
+
+    public Restaurante(String nombreR, String direccion, String telefono) {
+        super();
+        this.nombreR = nombreR;
+        this.direccion = direccion;
+        this.telefono = telefono;
+    }
+
 
     public void setNombreR(String nombre) {
         this.nombreR = nombre;
