@@ -14,7 +14,7 @@ public class Main {
         System.out.println("5. Eliminar un plato");
         System.out.println("6. Salir");
         int opcion = sc.nextInt();
-        Restaurante restaurante = null; // Initialize restaurante
+        Restaurante restaurante = null;
         do {
             opcion = sc.nextInt();
             switch (opcion){
@@ -25,7 +25,7 @@ public class Main {
                     String direccion = sc.next();
                     System.out.println("Ingrese el telefono del restaurante");
                     String telefono = sc.next();
-                    restaurante = new Restaurante(nombreR, direccion, telefono); // Assuming Restaurante constructor accepts three Strings
+                    restaurante = new Restaurante(nombreR, direccion, telefono);
                     System.out.println("Nombre del restaurante: " + restaurante.getNombreR());
                     System.out.println("Direccion del restaurante: " + restaurante.getDireccion());
                     System.out.println("Telefono del restaurante: " + restaurante.getTelefono());
@@ -34,9 +34,9 @@ public class Main {
                     System.out.println("Ingrese el nombre del plato");
                     String nombre = sc.next();
                     System.out.println("Ingrese el precio del plato");
-                    double precioPlato = sc.nextDouble(); // Rename variable
+                    double precioPlato = sc.nextDouble();
                     System.out.println("Ingrese el ID del plato");
-                    int platoID1 = sc.nextInt(); // Rename variable
+                    int platoID1 = sc.nextInt();
                     Plato plato = new Plato(nombre, precioPlato, platoID1);
                     break;
                 case 3:
@@ -45,14 +45,14 @@ public class Main {
                     break;
                 case 4:
                     System.out.println("Ingrese el ID del plato que desea modificar");
-                    int platoID2 = sc.nextInt(); // Rename variable
+                    int platoID2 = sc.nextInt();
                     System.out.println("Ingrese el nuevo precio del plato");
-                    double precioNuevo = sc.nextDouble(); // Rename variable
+                    double precioNuevo = sc.nextDouble();
                     restaurante.getMenu().modificarPrecioPlato(platoID2, precioNuevo);
                     break;
                 case 5:
                     System.out.println("Ingrese el ID del plato que desea eliminar");
-                    int platoID3 = sc.nextInt(); // Rename variable
+                    int platoID3 = sc.nextInt();
                     restaurante.getMenu().eliminarPlato(platoID3);
                     break;
                 case 6:
