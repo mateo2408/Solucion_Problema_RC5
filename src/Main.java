@@ -2,21 +2,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
-
-        System.out.println("Bienvenido a nuestro restaurante");
-        System.out.println("Ingrese la opcion que desea realizar");
-        Scanner sc = new Scanner(System.in);
-        System.out.print("1. Informacion del Restaurante");
-        System.out.println("2. Crear un plato");
-        System.out.println("3. Ver Menu");
-        System.out.println("4. Modificar Precio de un plato");
-        System.out.println("5. Eliminar un plato");
-        System.out.println("6. Salir");
-        int opcion = sc.nextInt();
-        Restaurante restaurante = null;
+            System.out.println("Bienvenido a nuestro restaurante");
+             System.out.println("Ingrese la opcion que desea realizar");
+             Scanner sc = new Scanner(System.in);
+             int opcion;
         do {
-            opcion = sc.nextInt();
+             Restaurante restaurante = null;
+             System.out.println("1. Informacion del Restaurante");
+             System.out.println("2. Crear un plato");
+             System.out.println("3. Ver Menu");
+             System.out.println("4. Modificar Precio de un plato");
+             System.out.println("5. Eliminar un plato");
+             System.out.println("6. Salir");
+             opcion = sc.nextInt();
             switch (opcion){
                 case 1:
                     System.out.println("Ingrese el nombre del restaurante");
